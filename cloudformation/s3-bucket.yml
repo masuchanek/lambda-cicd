@@ -3,7 +3,7 @@ Description: 'S3 bucket for our CICD PR'
 
 Parameters:
   Environment:
-    Type: String: 
+    Type: String 
     Default: test
     AllowedValues:
       - test
@@ -20,8 +20,9 @@ Resources:
           Value: !Ref Environment
         - Key: Environment
           Value: GithubActionsTesting
+        
 
-  Outputs:
-    BucketName:
-      Description: 'Name of created S3 Bucket'
-      Value: !!Ref MyS3Bucket
+Outputs:
+  BucketName:
+    Description: 'Name of created S3 Bucket'
+    Value: !Ref MyS3Bucket
