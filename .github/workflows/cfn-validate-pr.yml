@@ -33,7 +33,7 @@ jobs:
           aws cloudformation create-stack --stack-name $stack_name --template-body file://cloudformation/s3-bucket.yml --parameters ParameterKey=Environment,ParameterValue=test
 
       - name: Comment on the PR
-        uses: actions/github-scipt@v6
+        uses: actions/github-script@v6
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
